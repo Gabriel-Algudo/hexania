@@ -11,13 +11,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.RecyclerView
-import hexania.core.model.party.Party
-import hexania.core.model.player.Player
-import hexania.core.model.character.Champion
 import hexania.core.model.party.PartyBuilder
 import hexania.core.model.player.PlayerBuilder
-import hexania.core.vue.CardAdapter
+
 
 
 class MainActivity : AppCompatActivity() {
