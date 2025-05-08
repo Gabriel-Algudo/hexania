@@ -1,0 +1,54 @@
+{
+  "characters" : [
+    {
+      "id" : 1,
+      "nom" : "Erezir",
+      "lore" : "Ancien mort vivant, bannis des siens. De son vrai nom []-zo ; ancien conseillé de la Liche, trahi, il choisit la voie mystique et s'élève en demi-dieu reniant sa nature de spectre et devenant l'émissaire des morts.",
+      "titre": "Faucheur d'âmes",
+      "pv" : 67,
+      "depl" : 0,
+      "prec" : 30.0,
+      "res" : 20.0
+    },
+    {
+      "id" : 2,
+      "nom" : "Kalon",
+      "lore" : "Disciple de Hata qui lui aura enseigné l'Ancien Dialecte, il s'en sert pour se faire comprendre des animaux et manipuler la magie",
+      "titre": "Ami de la Nature",
+      "pv" : 76,
+      "depl" : 0,
+      "prec" : 20.0,
+      "res" : 10.0
+    },
+    {
+      "id" : 3,
+      "nom" : "Kaalia",
+      "lore" : "Gardienne d'un temple en ruine, apôtre du dieu des Montagnes d'ébénite",
+      "titre": "Emissaire Pure",
+      "pv" :63,
+      "depl" : 0,
+      "prec" : 50.0,
+      "res" : 10.0
+    },
+    {
+      "id" : 4,
+      "nom" : "Snorky",
+      "lore" : "Contrebandier vivant dans la partie pauvre de la cité-état, il a remis en état Glupy, et s'en sert pour arriver a ses fins",
+      "titre": "Contrebandier dépravé",
+      "pv" :70,
+      "depl" : 0,
+      "prec" : 80.0,
+      "res" : 10.0
+    },
+    {
+      "id" : 5,
+      "nom" : "Rewelan",
+      "lore" : "Une légende raconte qu'elle vit dans un volcan et chasse toute personne osant s'approcher de celui-ci. C'est une entité aussi maléfique que le puissant Duun-zh",
+      "titre": "Fléau des terres lointaines",
+      "pv" :68,
+      "depl" : 0,
+      "prec" : 10.0,
+      "res" : 50.0
+    }
+  ]
+}
