@@ -46,12 +46,19 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    //ViewModel pour partager les donnée de PartyBuilder entre les activités
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+
     //Json (de)serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+    implementation(libs.kotlinx.serialization.json)
 
     //Coil pour l'affichage des images
-    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
-    implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

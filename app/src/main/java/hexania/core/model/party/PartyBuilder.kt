@@ -4,7 +4,7 @@ import hexania.core.model.board.Board
 import hexania.core.model.character.Champion
 import hexania.core.model.player.PlayerBuilderI
 
-class PartyBuilder private constructor(
+data class PartyBuilder constructor(
 
     private val players : MutableList<PlayerBuilderI> = mutableListOf<PlayerBuilderI>(),
     private val board: Board? = null
