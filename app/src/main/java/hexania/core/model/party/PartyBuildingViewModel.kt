@@ -2,11 +2,9 @@ package hexania.core.model.party
 
 import androidx.lifecycle.ViewModel
 import hexania.core.model.player.Player
-import hexania.core.model.player.PlayerBuilderI
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 
 class PartyBuildingViewModel : ViewModel() {
 
@@ -21,9 +19,9 @@ class PartyBuildingViewModel : ViewModel() {
         }
     }
 
-    fun stepInitToPlayer(players : MutableList<PlayerBuilderI>) {
+    fun stepInitToPlayer(playersName : MutableList<String>) {
     if (this.nextStep == PartyCreationStep.PLAYER){
-            _uiState.value.addAllPlayer(players)
+            _uiState.value.addAllPlayer(playersName)
         this.nextStep = PartyCreationStep.CHAMPION
         } else {
             throw IllegalArgumentException("Invalid step")

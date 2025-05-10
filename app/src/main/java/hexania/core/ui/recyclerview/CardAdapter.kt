@@ -1,11 +1,10 @@
-package hexania.core.vue.recyclerview
+package hexania.core.ui.recyclerview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import hexania.core.R
 import hexania.core.model.character.Champion
-import hexania.core.vue.recyclerview.CardViewHolder
 
 class CardAdapter (val champions : MutableList<Champion>) : RecyclerView.Adapter<CardViewHolder>(){
 

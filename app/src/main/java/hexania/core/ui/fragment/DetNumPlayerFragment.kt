@@ -1,4 +1,4 @@
-package hexania.core.vue.fragment
+package hexania.core.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import hexania.core.R
 import hexania.core.model.party.PartyBuildingViewModel
@@ -19,7 +20,7 @@ class DetNumPlayerFragment() : Fragment(){
 
     private val partyViewModel : PartyBuildingViewModel by navGraphViewModels(R.id.navigation_party_builder_graph)
 
-    //variable de l'UI
+    //element de l'UI
     lateinit var seekBar: SeekBar
     lateinit var valeurSeekBar: TextView
     lateinit var allEditText : List<EditText>
@@ -81,7 +82,8 @@ class DetNumPlayerFragment() : Fragment(){
             for (editText in allEditText) {
                 nameList.add(editText.text.toString())
             }
-            //partyViewModel.stepInitToPlayer(nameList)
+            partyViewModel.stepInitToPlayer(nameList)
+            findNavController().navigate(R.id.action_detNumPlayer_to_chooseChampion)
         }
     }
 }

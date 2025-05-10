@@ -18,7 +18,7 @@ class PlayerBuilder private constructor(
         return PlayerBuilder()
     }
 
-    override fun setName(nom : String) : PlayerBuilderI{
+    override fun setName(nom : String): PlayerBuilder {
         return PlayerBuilder(nom)
     }
 

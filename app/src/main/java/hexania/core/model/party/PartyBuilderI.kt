@@ -1,14 +1,13 @@
 package hexania.core.model.party
 
 import hexania.core.model.character.Champion
-import hexania.core.model.player.PlayerBuilder
 import hexania.core.model.player.PlayerBuilderI
 
 interface PartyBuilderI {
 
     fun reset(): PartyBuilderI
 
-    fun addAllPlayer(playerList : MutableList<PlayerBuilderI>)
+    fun addAllPlayer(playerNameList : MutableList<String>)
 
     fun setName(namelist : MutableList<String>)
 

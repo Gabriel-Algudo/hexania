@@ -2,6 +2,7 @@ package hexania.core.model.party
 
 import hexania.core.model.board.Board
 import hexania.core.model.character.Champion
+import hexania.core.model.player.PlayerBuilder
 import hexania.core.model.player.PlayerBuilderI
 
 //A remplacer par un object PartyBuilder
@@ -15,8 +16,10 @@ class PartyBuilder private constructor(
         return PartyBuilder()
     }
 
-    override fun addAllPlayer(playerList: MutableList<PlayerBuilderI>) {
-        this.players.addAll(playerList)
+    override fun addAllPlayer(playerNameList: MutableList<String>) {
+        for (name in playerNameList){
+            players.add(PlayerBuilder.newPlayerBuilder().setName(name))
+        }
     }
 
     override fun setName(namelist: MutableList<String>) {
