@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_party_builder_graph" android:label="PartyCreation"
+    app:startDestination="@id/homeScreenFragment">
+
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="hexania.core.vue.fragment.HomeScreenFragment"
+        android:label="HomeScreenFragment"
+        tools:layout="@layout/hexania_home_screen">
+        <action
+            android:id="@+id/action_homeScreen_to_detNumPlayer"
+            app:destination="@id/detNumPlayerActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detNumPlayerActivity"
+        android:name="hexania.core.vue.fragment.DetNumPlayerFragment"
+        android:label="DetNumPlayerFragment"
+        tools:layout="@layout/det_num_player">
+        <action
+            android:id="@+id/action_detNumPlayer_to_chooseChampion"
+            app:destination="@id/chooseChampionActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseChampionActivity"
+        android:name="hexania.core.vue.fragment.ChooseChampionFragment"
+        android:label="ChooseChampionActivity"
+        tools:layout="@layout/choix_champion">
+    </fragment>
+
+
+
+</navigation>

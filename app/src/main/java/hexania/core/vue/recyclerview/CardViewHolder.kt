@@ -1,4 +1,4 @@
-package hexania.core.vue
+package hexania.core.vue.recyclerview
 
 import android.view.View
 import android.widget.ImageView
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil3.load
 import hexania.core.R
 import hexania.core.model.character.Champion
-import java.io.File
 
 class CardViewHolder (private val view : View) : RecyclerView.ViewHolder(view) {
 

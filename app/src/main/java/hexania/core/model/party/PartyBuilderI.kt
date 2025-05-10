@@ -8,17 +8,19 @@ interface PartyBuilderI {
 
     fun reset(): PartyBuilderI
 
-    fun addPlayer(playerBuilder : PlayerBuilderI) :PartyBuilderI
+    fun addAllPlayer(playerList : MutableList<PlayerBuilderI>)
 
-    fun setName(namelist : MutableList<String>) :PartyBuilderI
+    fun setName(namelist : MutableList<String>)
 
-    fun setChampions(championList : MutableList<Champion>) :PartyBuilderI
+    fun setChampions(championList : MutableList<Champion>)
 
-    fun setArme() :PartyBuilderI
+    fun setArme()
 
-    fun setRelique() :PartyBuilderI
+    fun setRelique()
 
-    fun setCompagnon() :PartyBuilderI
+    fun setCompagnon()
 
-    fun setArmure() :PartyBuilderI
+    fun setArmure()
+
+    fun build() : Party
 }
