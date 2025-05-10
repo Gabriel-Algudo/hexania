@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.navGraphViewModels
 import androidx.recyclerview.widget.RecyclerView
 import hexania.core.R
+import hexania.core.model.character.Champion
 import hexania.core.model.party.PartyBuildingViewModel
+import hexania.core.ui.recyclerview.CardAdapter
 import kotlin.getValue
 
 class ChooseChampionFragment : Fragment() {
@@ -27,6 +29,11 @@ class ChooseChampionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        recyclerView = view.findViewById(R.id.recyclerView)
+        val champions = Champion.getAllCharacters(requireContext())
+
+        recyclerView.adapter = CardAdapter(champions)
 
     }
 }
