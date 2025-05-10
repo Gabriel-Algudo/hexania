@@ -75,5 +75,13 @@ class DetNumPlayerFragment() : Fragment(){
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
             }
         })
+
+        startBtn.setOnClickListener {
+            var nameList = mutableListOf<String>()
+            for (editText in allEditText) {
+                nameList.add(editText.text.toString())
+            }
+            //partyViewModel.stepInitToPlayer(nameList)
+        }
     }
 }
