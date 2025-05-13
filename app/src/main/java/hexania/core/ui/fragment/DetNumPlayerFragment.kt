@@ -25,6 +25,9 @@ class DetNumPlayerFragment() : Fragment(){
     lateinit var valeurSeekBar: TextView
     lateinit var allEditText : List<EditText>
     lateinit var startBtn: Button
+    lateinit var titre : TextView
+    lateinit var minText : TextView
+    lateinit var maxText : TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,12 +50,19 @@ class DetNumPlayerFragment() : Fragment(){
         val textPlayer6 = view.findViewById<EditText>(R.id.plainText_j6)
         allEditText = listOf(textPlayer1, textPlayer2, textPlayer3, textPlayer4, textPlayer5, textPlayer6)
         startBtn = view.findViewById(R.id.btn_start)
+        titre = view.findViewById(R.id.titreDetNumPlayer)
+        minText = view.findViewById(R.id.minText)
+        maxText = view.findViewById(R.id.maxText)
 
         seekBar.max = 6
         seekBar.min = 2
         seekBar.progress = 6
         seekBar.incrementProgressBy(1)
         valeurSeekBar.text = seekBar.progress.toString()
+
+        minText.text = seekBar.min.toString()
+        maxText.text = seekBar.max.toString()
+        titre.text = "Choisissez le nombre de joueurs"
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(
@@ -85,5 +95,10 @@ class DetNumPlayerFragment() : Fragment(){
             partyViewModel.stepInitToPlayer(nameList)
             findNavController().navigate(R.id.action_detNumPlayer_to_chooseChampion)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        partyViewModel.resetToInit()
     }
 }

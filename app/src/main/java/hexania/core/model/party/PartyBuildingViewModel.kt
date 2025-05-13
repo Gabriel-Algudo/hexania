@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.asStateFlow
 
 class PartyBuildingViewModel : ViewModel() {
 
-    private var nextStep : PartyCreationStep = PartyCreationStep.INIT
+    var nextStep : PartyCreationStep = PartyCreationStep.INIT
     private var _uiState = MutableStateFlow(PartyBuilder.getPartyBuilder())
     val uiState : StateFlow<PartyBuilderI> = _uiState.asStateFlow()
 
@@ -30,6 +30,14 @@ class PartyBuildingViewModel : ViewModel() {
 
     fun stepPlayerToChampion(nextStep : PartyCreationStep, champions : Player) {
         TODO()
+    }
+
+    fun resetToPlayer(){
+        this.nextStep = PartyCreationStep.PLAYER
+    }
+
+    fun resetToInit(){
+        this.nextStep = PartyCreationStep.INIT
     }
 
     }

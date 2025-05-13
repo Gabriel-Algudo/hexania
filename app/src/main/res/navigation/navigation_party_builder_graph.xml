@@ -31,6 +31,9 @@
         android:name="hexania.core.ui.fragment.ChooseChampionFragment"
         android:label="ChooseChampionActivity"
         tools:layout="@layout/choix_champion">
+        <action
+            android:id="@+id/action_chooseChampion_to_chooseChampion"
+            app:destination="@id/chooseChampionActivity" />
     </fragment>
 
 

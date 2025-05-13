@@ -49,6 +49,166 @@
       "depl" : 0,
       "prec" : 10.0,
       "res" : 50.0
+    },
+    {
+      "id" : 6,
+      "nom" : "Xerf'it",
+      "lore" : "Lionnyen, demi frere caché d'Arramön, erre sur les routes en quêtes de réponses et de vengeance",
+      "titre": "Vagabond",
+      "pv" :65,
+      "depl" : 0,
+      "prec" : 10.0,
+      "res" : 30.0
+    },
+    {
+      "id" : 7,
+      "nom" : "Arramön",
+      "lore" : "Fils du chef des guardes de la cité-état, grand guerrier destiné a être souverain de la cité-état",
+      "titre": "Monarque adulé",
+      "pv" :67,
+      "depl" : 0,
+      "prec" : 60.0,
+      "res" : 40.0
+    },
+    {
+      "id" : 8,
+      "nom" : "Kuroi'Ryu",
+      "lore" : "Dernière héritière d'un grand clan décimé",
+      "titre": "Héritière déchue",
+      "pv" :71,
+      "depl" : 0,
+      "prec" : 65.0,
+      "res" : 15.0
+    },
+    {
+      "id" : 9,
+      "nom" : "Zharra",
+      "lore" : "Demi-soeur de Xerfit (ils partagent la même mère). Grande trappeuse et dueliste invétérée, elle n'hésite pas à mettre ses talents au services des plus faibles",
+      "titre": "Traqueuse de génie",
+      "pv" :73,
+      "depl" : 1,
+      "prec" : 40.0,
+      "res" : 20.0
+    },
+    {
+      "id" : 10,
+      "nom" : "Hata",
+      "lore" : "Maître de Kalon, ancienne divinité déchue considéré comme le dieu Cerf qui a inventé l'Ancien Dialecte (apôtre ?)",
+      "titre": "Un souvenir de lumière",
+      "pv" :63,
+      "depl" : 0,
+      "prec" : 40.0,
+      "res" : 60.0
+    },
+    {
+      "id" : 11,
+      "nom" : "Grildhor",
+      "lore" : "Vit reclus dans le but de parfaire son art de la forge; certain disent que son disciple est le créateur des armes de la terre sainte nommée HEXANIA",
+      "titre": "Forgeron inégalé",
+      "pv" :70,
+      "depl" : 0,
+      "prec" : 30.0,
+      "res" : 20.0
+    },
+    {
+      "id" : 12,
+      "nom" : "Dr K-ug",
+      "lore" : "Scientifique cruel exilé pour ses experiences attroces (greffes d'organe de races différentes sur enfants), père adoptif de Draesi-us",
+      "titre": "Chercheur immoral",
+      "pv" :73,
+      "depl" : 0,
+      "prec" : 35.0,
+      "res" : 35.0
+    },
+    {
+      "id" : 13,
+      "nom" : "G1u.π",
+      "lore" : "Prototype avec une intelligence artificielle tres peu développé, mais avec une puissance hors du commun. Son nom se prononce Glupy.",
+      "titre": "Machine de guerre",
+      "pv" :70,
+      "depl" : 2,
+      "prec" : 0.0,
+      "res" : 60.0
+    },
+    {
+      "id" : 14,
+      "nom" : "Silkarry",
+      "lore" : "Vit entre la cité-état et la foret, traqueuse hors paire, capable de se camoufler avec le strict minimum, elle va souvent chasser dans la foret, proche de Hata",
+      "titre": "Chasseuse hors pair",
+      "pv" :65,
+      "depl" : 0,
+      "prec" : 20.0,
+      "res" : 15.0
+    },
+    {
+      "id" : 15,
+      "nom" : "Nagimi",
+      "lore" : "Semi-humain vivant dans des montagnes. Sa sagesse n'est rivalisé que par des entités anciennes et peu d'humain peuvent se vanter de l'avoir apperçu en gravant les montagnes",
+      "titre": "Gardienne de calamité",
+      "pv" :69,
+      "depl" : 0,
+      "prec" : 100.0,
+      "res" : 30.0
+    },
+    {
+      "id" : 16,
+      "nom" : "Saegorn",
+      "lore" : "Beaucoup son terrifié par son apparence, entre dragon et squellette il semblerait. Il est pourtant tres sociable malgrés ces pulsions colériques",
+      "titre": "Descendant draconique",
+      "pv" :70,
+      "depl" : 0,
+      "prec" : 50.0,
+      "res" : 30.0
+    },
+    {
+      "id" : 17,
+      "nom" : "Agn-aa",
+      "lore" : "Fais partie de l'armée de Duun-zh. Si l'on ne se fie uniquement à son nom, il n'est pas fort... Il saura vous prouver le contraire",
+      "titre": "Revenant d'un temps anciens",
+      "pv" :60,
+      "depl" : 0,
+      "prec" : 50.0,
+      "res" : 70.0
+    },
+    {
+      "id" : 18,
+      "nom" : "Duun-zh",
+      "lore" : "Etre omnipotent vivant dans la Vallée Osseuse, souverain suprême de tout les être maléfiques vivant sur ses terres",
+      "titre": "Dislocateur de monde",
+      "pv" :68,
+      "depl" : 0,
+      "prec" : 50.0,
+      "res" : 50.0
+    },
+    {
+      "id" : 19,
+      "nom" : "Azar-an",
+      "lore" : "Mort vivant avec une tres grande mobilité aussi bien terrestre qu'aérienne, c'est l'éclaireur parfait. Si vous le voyez, fuyez, l'armée de Duun-zh arrive",
+      "titre": "Apôtre de la fin",
+      "pv" :68,
+      "depl" : 2,
+      "prec" : 60.0,
+      "res" : 10.0
+    },
+    {
+      "id" : 20,
+      "nom" : "Draesi-us",
+      "lore" : "Enfant adoptif de Dr K-ug. Son père s'en ai servit pour des expériences indescriptible. Ayant subit douleur inhumaine et blessure indénombrable, lors d'une expérience qui aurait-on cru échouée, il revient à la vie, fou.",
+      "titre": "Cobaye tourmenté",
+      "pv" :60,
+      "depl" : 0,
+      "prec" : 25.0,
+      "res" : 85.0
+    },
+    {
+      "id" : 21,
+      "nom" : "Draesi-us Démoniaque",
+      "lore" : "Sa résurrection n'était pas miraculeuse. Voici l'intérieur de son être... Voici l'avènement de son passé.",
+      "titre": "Enfant des ténèbres",
+      "pv" :60,
+      "depl" : 0,
+      "prec" : 0.0,
+      "res" : 0.0
     }
   ]
 }

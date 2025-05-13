@@ -8,8 +8,9 @@
 
     <SeekBar
         android:id="@+id/seekBar_nbJoueur"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="272dp"
+        android:layout_height="41dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -107,17 +108,15 @@
         app:layout_constraintVertical_bias="0.32999998" />
 
     <TextView
-        android:id="@+id/Hexania"
-        android:layout_width="wrap_content"
+        android:id="@+id/titreDetNumPlayer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="Bienvenue dans Hexania !"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="28sp"
         android:textStyle="bold"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar_nbJoueur"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -128,10 +127,11 @@
         android:layout_height="wrap_content"
         android:labelFor="@id/seekBar_nbJoueur"
         android:text="Choisissez le nombre de joueurs : "
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar_nbJoueur"
-        app:layout_constraintEnd_toEndOf="@+id/seekBar_nbJoueur"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/seekBar_nbJoueur" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/valSeekBar"
@@ -140,5 +140,21 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar_nbJoueur"
         app:layout_constraintStart_toEndOf="@+id/labelSeekBar"
         app:layout_constraintTop_toTopOf="@+id/labelSeekBar" />
+
+    <TextView
+        android:id="@+id/minText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar_nbJoueur"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar_nbJoueur"
+        app:layout_constraintTop_toTopOf="@+id/seekBar_nbJoueur" />
+
+    <TextView
+        android:id="@+id/maxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar_nbJoueur"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_nbJoueur"
+        app:layout_constraintTop_toTopOf="@+id/seekBar_nbJoueur" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
