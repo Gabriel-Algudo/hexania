@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
-        android:textAppearance="TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="28sp"
         android:textStyle="bold"
         android:typeface="normal"

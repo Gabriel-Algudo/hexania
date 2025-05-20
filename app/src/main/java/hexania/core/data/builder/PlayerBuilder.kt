@@ -1,12 +1,16 @@
-package hexania.core.model.player
+package hexania.core.data.builder
 
-import hexania.core.model.arca.Arme
-import hexania.core.model.arca.Armure
-import hexania.core.model.arca.Compagnon
-import hexania.core.model.arca.Relique
+import hexania.core.domain.model.Arme
+import hexania.core.domain.model.Armure
+import hexania.core.domain.model.Champion
+import hexania.core.domain.model.Compagnon
+import hexania.core.domain.model.Player
+import hexania.core.domain.model.Relique
+import hexania.core.data.builder.PlayerBuilderI
 
 class PlayerBuilder private constructor(
     val nom : String ? = null,
+    private val champion : Champion? = null,
     private val arme : Arme? = null,
     private val relique : Relique? = null,
     private val compagnon : Compagnon? = null,
@@ -14,12 +18,16 @@ class PlayerBuilder private constructor(
 
 
 ) : PlayerBuilderI {
-    override fun reset() :PlayerBuilderI {
+    override fun reset() : PlayerBuilderI {
         return PlayerBuilder()
     }
 
     override fun setName(nom : String): PlayerBuilder {
         return PlayerBuilder(nom)
+    }
+
+    override fun setChampion(champion: Champion): PlayerBuilderI {
+        return PlayerBuilder(this.nom, champion)
     }
 
     override fun setArme(): PlayerBuilderI {
@@ -45,6 +53,7 @@ class PlayerBuilder private constructor(
     override fun toString(): String {
         var string = "Player : [ "
         string += "Nom : $nom, "
+        string += "Champion : $champion, "
         string += "Arme : $arme, "
         string += "Relique : $relique, "
         string += "Compagnon : $compagnon, "
@@ -53,7 +62,7 @@ class PlayerBuilder private constructor(
     }
 
     companion object{
-        fun newPlayerBuilder() : PlayerBuilderI{
+        fun newPlayerBuilder() : PlayerBuilderI {
             return PlayerBuilder()
         }
     }

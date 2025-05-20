@@ -1,4 +1,4 @@
-package hexania.core.model.player
+package hexania.core.domain.model
 
 class Player (val name : String) {
 }

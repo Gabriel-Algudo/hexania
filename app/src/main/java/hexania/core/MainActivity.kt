@@ -1,15 +1,10 @@
-package hexania.core.ui
+package hexania.core
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.navGraphViewModels
-import hexania.core.R
-import hexania.core.model.party.PartyBuildingViewModel
-import kotlin.getValue
 
 class MainActivity : AppCompatActivity(){
 

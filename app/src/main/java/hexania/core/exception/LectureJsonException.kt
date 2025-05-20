@@ -1,4 +1,4 @@
-package hexania.core.model.character.json
+package hexania.core.exception
 
 class LectureJsonException(val string : String) : Exception(string) {
 }

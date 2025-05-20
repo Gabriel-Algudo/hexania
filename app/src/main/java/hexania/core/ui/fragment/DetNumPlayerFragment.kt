@@ -9,25 +9,28 @@ import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import hexania.core.R
-import hexania.core.model.party.PartyBuildingViewModel
+import hexania.core.ui.viewmodel.NavigationEvent
+import hexania.core.ui.viewmodel.PartyBuildingViewModel
+import kotlinx.coroutines.launch
 import kotlin.getValue
 
 
-class DetNumPlayerFragment() : Fragment(){
+class DetNumPlayerFragment() : Fragment() {
 
-    private val partyViewModel : PartyBuildingViewModel by navGraphViewModels(R.id.navigation_party_builder_graph)
+    private val partyViewModel: PartyBuildingViewModel by navGraphViewModels(R.id.navigation_party_builder_graph)
 
     //element de l'UI
     lateinit var seekBar: SeekBar
     lateinit var valeurSeekBar: TextView
-    lateinit var allEditText : List<EditText>
+    lateinit var allEditText: List<EditText>
     lateinit var startBtn: Button
-    lateinit var titre : TextView
-    lateinit var minText : TextView
-    lateinit var maxText : TextView
+    lateinit var titre: TextView
+    lateinit var minText: TextView
+    lateinit var maxText: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,15 +51,13 @@ class DetNumPlayerFragment() : Fragment(){
         val textPlayer4 = view.findViewById<EditText>(R.id.plainText_j4)
         val textPlayer5 = view.findViewById<EditText>(R.id.plainText_j5)
         val textPlayer6 = view.findViewById<EditText>(R.id.plainText_j6)
-        allEditText = listOf(textPlayer1, textPlayer2, textPlayer3, textPlayer4, textPlayer5, textPlayer6)
+        allEditText =
+            listOf(textPlayer1, textPlayer2, textPlayer3, textPlayer4, textPlayer5, textPlayer6)
         startBtn = view.findViewById(R.id.btn_start)
         titre = view.findViewById(R.id.titreDetNumPlayer)
         minText = view.findViewById(R.id.minText)
         maxText = view.findViewById(R.id.maxText)
 
-        seekBar.max = 6
-        seekBar.min = 2
-        seekBar.progress = 6
         seekBar.incrementProgressBy(1)
         valeurSeekBar.text = seekBar.progress.toString()
 
@@ -88,17 +89,28 @@ class DetNumPlayerFragment() : Fragment(){
         })
 
         startBtn.setOnClickListener {
-            var nameList = mutableListOf<String>()
-            for (editText in allEditText) {
-                nameList.add(editText.text.toString())
+            for (indexEditText in 0..seekBar.progress-1) {
+                partyViewModel.addPlayer()
+                partyViewModel.addNameToPlayer(allEditText[indexEditText].text.toString(), indexEditText)
             }
-            partyViewModel.stepInitToPlayer(nameList)
-            findNavController().navigate(R.id.action_detNumPlayer_to_chooseChampion)
+            partyViewModel.toChampion()
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            partyViewModel.navigationEvents.collect { event ->
+                when (event) {
+                    NavigationEvent.toChampion -> findNavController().navigate(R.id.action_detNumPlayer_to_chooseChampion)
+                    else -> {throw IllegalArgumentException("Invalid navigation event")}
+                }
+            }
         }
     }
 
+
+/*
     override fun onDestroyView() {
         super.onDestroyView()
         partyViewModel.resetToInit()
     }
+    */
 }

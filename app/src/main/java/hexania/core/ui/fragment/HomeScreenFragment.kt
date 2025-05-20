@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import hexania.core.R
-import hexania.core.model.party.PartyBuildingViewModel
+import hexania.core.ui.viewmodel.NavigationEvent
+import hexania.core.ui.viewmodel.PartyBuildingViewModel
+import kotlinx.coroutines.launch
 
 class HomeScreenFragment() : Fragment() {
 
@@ -29,11 +32,20 @@ class HomeScreenFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //partyViewModel.reset()
+
         startBtn = view.findViewById(R.id.button)
         startBtn.setOnClickListener {
-            partyViewModel.reset()
-            findNavController().navigate(R.id.action_homeScreen_to_detNumPlayer)
+            partyViewModel.toPlayer()
         }
 
+        viewLifecycleOwner.lifecycleScope.launch {
+            partyViewModel.navigationEvents.collect { event ->
+                when (event) {
+                    NavigationEvent.toPlayer -> findNavController().navigate(R.id.action_homeScreen_to_detNumPlayer)
+                    else -> {throw IllegalArgumentException("Invalid navigation event")}
+                }
+            }
+        }
     }
 }
