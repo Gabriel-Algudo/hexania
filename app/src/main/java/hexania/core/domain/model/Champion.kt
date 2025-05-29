@@ -9,8 +9,8 @@ class Champion (
     val pv :Int,
     val depl :Int,
     val prec : Double,
-    val res : Double) {
-
+    val res : Double
+){
     override fun toString(): String {
         return this.nom
     }

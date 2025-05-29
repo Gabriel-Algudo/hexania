@@ -1,4 +1,4 @@
-package hexania.core.data.source
+package hexania.core.data.json
 
 import hexania.core.domain.model.Champion
 import kotlinx.serialization.Serializable
@@ -34,16 +34,16 @@ data class ChampionJson(
             this.res
         )
     }
+}
 
-    internal fun nettoyerChaine(input: String): String {
-        // Normalisation Unicode pour enlever les accents
-        val sansAccents = Normalizer.normalize(input, Normalizer.Form.NFD)
-            .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
+internal fun nettoyerChaine(input: String): String {
+    // Normalisation Unicode pour enlever les accents
+    val sansAccents = Normalizer.normalize(input, Normalizer.Form.NFD)
+        .replace(Regex("\\p{InCombiningDiacriticalMarks}+"), "")
 
-        // Suppression ou remlpacement des caractères ne faisant pas partie de l'alphabet
-        val sansCaracteres = sansAccents.replace("-", "").replace("'", "").replace(" ", "").replace("π","py").replace(".","").replace("1","l")
+    // Suppression ou remlpacement des caractères ne faisant pas partie de l'alphabet
+    val sansCaracteres = sansAccents.replace("-", "").replace("'", "").replace(" ", "").replace("π","py").replace(".","").replace("1","l")
 
-        // Conversion en minuscules
-        return sansCaracteres.lowercase()
-    }
+    // Conversion en minuscules
+    return sansCaracteres.lowercase()
 }

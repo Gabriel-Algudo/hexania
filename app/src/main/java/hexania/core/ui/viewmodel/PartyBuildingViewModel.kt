@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import hexania.core.data.builder.PartyBuilder
 import hexania.core.data.builder.PartyBuilderI
+import hexania.core.data.repository.ChampionRepository
 import hexania.core.domain.model.Champion
-import hexania.core.ui.viewmodel.NavigationEvent
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -28,7 +28,8 @@ class PartyBuildingViewModel : ViewModel() {
 
     init {
         try {
-            _championsAvailable.value = Champion.getAllCharacters()
+            val championRepository = ChampionRepository()
+            _championsAvailable.value = championRepository.getAllChampions()
         } catch (e : Exception) {
             throw e
         }
