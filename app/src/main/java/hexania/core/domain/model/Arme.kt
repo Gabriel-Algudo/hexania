@@ -1,12 +1,19 @@
 package hexania.core.domain.model
 
+import java.io.File
+
 class Arme (
-    val id : Int,
-    val nom : String,
+    id : Int,
+    nom : String,
     val cout : Int,
-    val type : String,
-    val image : String,
-){
+    val type : TypeArme,
+    image : File,
+) : Equipement(id, nom, image){
+
+    override fun use (cible : Champion) {
+        TODO("faire les use() ")
+    }
+
     override fun toString(): String {
         return this.nom
     }

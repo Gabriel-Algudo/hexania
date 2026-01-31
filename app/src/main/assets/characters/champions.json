@@ -162,7 +162,7 @@
     {
       "id" : 17,
       "nom" : "Agn-aa",
-      "lore" : "Fais partie de l'armée de Duun-zh. Si l'on ne se fie uniquement à son nom, il n'est pas fort... Il saura vous prouver le contraire",
+      "lore" : "Fais partie de l'armée de Duun-zh. Si l'on ne se fie qu'uniquement à son nom, il n'est pas fort... Il saura vous prouver le contraire",
       "titre": "Revenant d'un temps anciens",
       "pv" :60,
       "depl" : 0,

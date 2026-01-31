@@ -1,0 +1,114 @@
+[
+  {
+    "id" : 1,
+    "nom" : "Piège atemporel",
+    "cout" : 3,
+    "type" : "active",
+    "utilisation" : "tour",
+    "nbUtilisation" : 1
+  },
+  {
+    "id" : 2,
+    "nom" : "Armoirie de guerre",
+    "cout" : 0,
+    "type" : "active",
+    "utilisation" : "partie",
+    "nbUtilisation" : 1
+  },
+  {
+    "id" : 3,
+    "nom" : "Boucle d'oreille du génie",
+    "cout" : 4,
+    "type" : "active",
+    "utilisation" : "partie",
+    "nbUtilisation" : 3
+  },
+  {
+    "id" : 4,
+    "nom" : "Canine de vampire",
+    "cout" : 0,
+    "type" : "passive",
+    "utilisation" : "partie",
+    "nbUtilisation" : 0
+  },
+  {
+    "id" : 5,
+    "nom" : "Amulette de mage",
+    "cout" : 0,
+    "type" : "active",
+    "utilisation" : "tour",
+    "nbUtilisation" : 0
+  },
+  {
+    "id" : 6,
+    "nom" : "Faucille de druide",
+    "cout" : 0,
+    "type" : "passive",
+    "utilisation" : "partie",
+    "nbUtilisation" : 0
+  },
+  {
+    "id" : 7,
+    "nom" : "Restriction des dieux",
+    "cout" : 3,
+    "type" : "active",
+    "utilisation" : "partie",
+    "nbUtilisation" : 3
+  },
+  {
+    "id" : 8,
+    "nom" : "Cape du vagabond",
+    "cout" : 0,
+    "type" : "passive",
+    "utilisation" : "tour",
+    "nbUtilisation" : 1
+  },
+  {
+    "id" : 9,
+    "nom" : "Journal de l'artisan",
+    "cout" : 0,
+    "type" : "passive",
+    "utilisation" : "partie",
+    "nbUtilisation" : -1
+  },
+  {
+    "id": 10,
+    "nom": "Partition de Morphée",
+    "cout": 5,
+    "type": "active",
+    "utilisation": "tour",
+    "nbUtilisation": 1
+  },
+  {
+    "id" : 11,
+    "nom" : "Couteau cérémonial",
+    "cout" : 1,
+    "type" : "active",
+    "utilisation" : "tour",
+    "nbUtilisation" : 1
+  },
+  {
+    "id" : 12,
+    "nom" : "Plume de corbeau",
+    "cout" : 0,
+    "type" : "passive",
+    "utilisation" : "partie",
+    "nbUtilisation" : -1
+  },
+  {
+    "id" : 13,
+    "nom" : "Marteau d'Héphaistos",
+    "cout" : 0,
+    "type" : "passive",
+    "utilisation" : "partie",
+    "nbUtilisation" : -1
+  },
+  {
+    "id" : 14,
+    "nom" : "Poussée télékinésique",
+    "cout" : 4,
+    "type" : "active",
+    "utilisation" : "tour",
+    "nbUtilisation" : 1
+  }
+]
