@@ -3,3 +3,4 @@
 | nom | prénom | contact |
 |:-------|:--------|:----|
 | Algudo | Gabriel | / |
+| Algudo | Jules | / |
