@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "hexania"
+rootProject.name = "Hexania"
 include(":app")
  
